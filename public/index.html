@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ohmyfood</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+	<header class="header-nav">
+		<div class="header-nav header-nav__logo_ohmyfood">
+			<h1>ohmyfood</h1>
+		</div>
+
+		<form class="header-nav header-nav__form" method="post" action="traitement.php">
+			<label><i class="fas fa-map-marker-alt"></i></label>
+			<input type="text" name="localite" id="localite" placeholder="Paris Belleville">
+		</form>
+
+		<div class="header-nav">
+			<h1>Reservez le menu qui vous convient</h1>
+			<p>Découvrez ces restaurants d'exception, sélectionnés par nos soins</p>
+		</div>
+
+		<div class="button">Explorez nos restaurants</div>
+
+	</header>
+
+	<main>
+		<div class="regles">
+			<h1>Fonctionnement</h1>
+			<ol>
+				<li><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</li>
+				<li><i class="fas fa-list-ul"></i>Composez votre menu</li>
+				<li><i class="fas fa-store"></i>Dégustez au restaurant</li>
+			</ol>
+		</div>
+
+		<section class="restaurants">
+			<h1>Restaurants</h1>
+			<article class="restaurants restaurants-list">
+				<a href="la_palette_du_goût.html">
+					<figure>
+						<img src="images/restaurants/la-palette-du-gout.jpg" alt="Restaurant La palette du goût">
+					</figure>
+					<div>
+						<h3>La palette du goût</h3>
+						<p>Menilmontant</p>
+						<p><i class="far fa-heart"></i></p>
+					</div>
+				</a>
+			</article>
+			<article class="restaurants restaurants-list">
+				<a href="la_note_enchantee.html">
+					<figure>
+						<img src="images/restaurants/la-note-enchantee.jpg" alt="Restaurant La note enchantée">
+					</figure>
+					<div>
+						<h3>La note enchantée</h3>
+						<p>Charonne</p>
+						<p><i class="fas fa-heart"></i></p>
+					</div>
+				</a>
+			</article>
+			<article class="restaurants restaurants-list">
+				<a href="a_la_francaise.html">
+					<figure>
+						<img src="images/restaurants/a-la-francaise.jpg" alt="Restaurant À la française">
+					</figure>
+					<div>
+						<h3>À la française</h3>
+						<p>Cité Rouge</p>
+						<p><i class="far fa-heart"></i></p>
+					</div>
+				</a>
+			</article>
+			<article class="restaurants restaurants-list">
+				<a href="le_delice_des_sens.html">
+					<figure>
+						<img src="images/restaurants/le-delice-des-sens.jpg" alt="Restaurant Le délice des sens">
+					</figure>
+					<div>
+						<h3>Le délice des sens</h3>
+						<p>Folie-Méricourt</p>
+						<p><i class="far fa-heart"></i></p>
+					</div>
+				</a>
+			</article>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<img src="images/logo/ohmyfood@2x.svg" alt="Ohmyfood">
+		<a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a>
+		<a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaires</a>
+		<a href="#">Mentions légales</a>
+		<a href="#">Contact</a>
+	</footer>
+	
+</body>
+</html>

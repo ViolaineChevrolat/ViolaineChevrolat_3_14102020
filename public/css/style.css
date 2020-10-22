@@ -1,0 +1,54 @@
+body {
+  font-family: roboto, calibri, sans-serif;
+  box-sizing: border-box;
+  margin: o;
+}
+
+.header-nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.header-nav h1 {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+.header-nav____logo_ohmyfood h1 {
+  font-family: Shrikhand;
+  font-weight: bold;
+  font-size: 3rem;
+}
+.header-nav__form {
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  background-color: #949090;
+}
+.header-nav p {
+  text-align: center;
+}
+
+.regles {
+  display: flex;
+  flex-direction: column;
+}
+.regles li {
+  border: 1px solid #bdb8b8;
+  border-radius: 4px;
+}
+
+.button {
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  box-shadow: 5px 4px 4px #bdb8b8;
+}
+
+.restaurants img {
+  object-fit: cover;
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,74 @@
+
+$color-primaire: #9356DC;
+$color-secondaire: #FF79DA;
+$color-tertiaire: #99E2D0;
+$border-color: rgb(189, 184, 184);
+
+@mixin titres {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+@mixin border-radius ($color: $border-color) {
+    border: 1px solid $border-color;
+    border-radius: 4px;
+}
+
+@mixin button ($color: $color-secondaire) {
+    background: linear-gradient($color-secondaire, $color-primaire);
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    box-shadow: 5px 4px 4px $border-color;
+}
+
+body {
+    font-family: roboto, calibri, sans-serif;
+    box-sizing: border-box;
+    margin: o;
+}
+
+
+.header-nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+        & h1 {
+            @include titres;
+        }
+        &____logo_ohmyfood h1{
+            font-family: Shrikhand;
+            font-weight: bold;
+            font-size: 3rem;
+        }
+        &__form {
+            flex-direction: row;
+            width: 100%;
+            justify-content: center;
+            background-color: rgb(148, 144, 144);
+        }
+        & p {
+            text-align: center;
+        }
+    }
+
+.regles {
+    display: flex;
+    flex-direction: column;
+    & li {
+        @include border-radius;
+    }
+
+}
+
+.button {
+    @include button;
+}
+
+.restaurants {
+    & img {
+        object-fit: cover;
+        width: 100%;
+    }
+}
