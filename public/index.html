@@ -14,28 +14,31 @@
 
 <body>
 
-	<header class="header-nav">
-		<div class="header-nav header-nav__logo_ohmyfood">
-			<h1>ohmyfood</h1>
-		</div>
+	<header class="header">
 
-		<form class="header-nav header-nav__form" method="post" action="traitement.php">
-			<label><i class="fas fa-map-marker-alt"></i></label>
-			<input type="text" name="localite" id="localite" placeholder="Paris Belleville">
-		</form>
+		<div class="header header__logo_ohmyfood">
+			<img src="images/logo/ohmyfood@2x.svg" alt="ohmyfood">
+		</div>
 
 		<div class="header-nav">
-			<h1>Reservez le menu qui vous convient</h1>
-			<p>Découvrez ces restaurants d'exception, sélectionnés par nos soins</p>
-		</div>
+			<form class="header-nav__form" method="post" action="traitement.php">
+			<label><i class="fas fa-map-marker-alt"></i></label>
+			<input type="text" name="localite" id="localite" placeholder="Paris Belleville">
+			</form>
 
-		<div class="button">Explorez nos restaurants</div>
+			<div>
+				<h1>Réservez le menu qui vous convient</h1>
+				<p>Découvrez ces restaurants d'exception, sélectionnés par nos soins</p>
+			</div>
+
+			<div class="button">Explorez nos restaurants</div>
+		</div>
 
 	</header>
 
 	<main>
 		<div class="regles">
-			<h1>Fonctionnement</h1>
+			<h2>Fonctionnement</h2>
 			<ol>
 				<li><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</li>
 				<li><i class="fas fa-list-ul"></i>Composez votre menu</li>
@@ -44,7 +47,7 @@
 		</div>
 
 		<section class="restaurants">
-			<h1>Restaurants</h1>
+			<h2>Restaurants</h2>
 			<article class="restaurants restaurants-list">
 				<a href="la_palette_du_goût.html">
 					<figure>
