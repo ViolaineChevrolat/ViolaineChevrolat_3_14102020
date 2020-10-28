@@ -1,0 +1,53 @@
+@mixin h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: roboto, calibri, sans-serif;
+}
+
+@mixin titres {
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: roboto, calibri, sans-serif;
+    margin: 1em;
+}
+
+@mixin border-radius ($color: $border-color) {
+    border: 1px solid $color;
+    border-radius: 4px;
+}
+
+@mixin button ($color: $color-secondaire) {
+    justify-content: center;
+    background: linear-gradient($color, $color-primaire);
+    border-radius: 25px;
+    color: white;
+    font-weight: 600;
+    box-shadow: 2px 4px 4px rgb(177, 176, 176);
+    padding: 0;
+    margin: 0 3rem;
+}
+
+@mixin vignettes {
+    justify-content: center;
+    border: 0 white solid;
+    border-radius: 20px;
+    background-color: white;
+    margin: 1em;
+    height: auto;
+}
+
+@mixin details {
+    color: black;
+    margin: 0 1em;
+    line-height: 0.5em;
+}
+
+@mixin footer {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    background-color: rgb(77, 75, 75);
+    text-decoration: none;
+    color: white;
+}

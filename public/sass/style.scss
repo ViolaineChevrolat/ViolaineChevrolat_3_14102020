@@ -1,59 +1,36 @@
 
-$color-primaire: #9356DC;
-$color-secondaire: #FF79DA;
-$color-tertiaire: #99E2D0;
-$border-color: rgb(241, 239, 239);
+@import "./libs/_variables";
 
-@mixin h1 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    font-family: roboto, calibri, sans-serif;
-}
-
-@mixin titres {
-    font-size: 1.3rem;
-    font-weight: bold;
-    font-family: roboto, calibri, sans-serif;
-}
-
-@mixin border-radius ($color: $border-color) {
-    border: 1px solid $border-color;
-    border-radius: 4px;
-}
-
-@mixin button ($color: $color-secondaire) {
-    background: linear-gradient($color-secondaire, $color-primaire);
-    border-radius: 25px;
-    color: white;
-    font-weight: 600;
-    text-align: center;
-    box-shadow: 2px 4px 4px rgb(177, 176, 176);
-    padding: 0.8em 0 1em 0;
-    margin: 0 3em;
-}
+@import "./libs/mixins.scss";
 
 body {
     font-family: roboto, calibri, sans-serif;
     box-sizing: border-box;
-    margin: o;
+    margin: 0;
 }
+
+
+// header
 
 .header {
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
+    margin-top: 1em;
+    & __logo {
+        margin-bottom: 1em;
+        }
     }
 
-.header-nav {
+
+.header-choice {
+    margin: 0;
     background-color: $border-color;
-    padding-bottom: 3em;
     & h1 {
         font-size: 1.4rem;
         font-weight: 900;
         font-family: roboto, calibri, sans-serif;
         text-align: center;
-        margin: 0.7em 1.3em;
+        margin: 1.5em 1.3em 0.7em 1.3em;
     }
     & p {
         font-size: 1em;
@@ -61,36 +38,40 @@ body {
         line-height: 1.2em;
         margin: 0.8em 1em 2em 1em;
     }
-    &__form {
-        flex-direction: row;
-        justify-content: center;
-        background-color: linear-gradient(#e66465, #9198e5);
-            & i {
-                padding: 1em 0.8em;
-                margin-left: 5em;
-            }
-            & input[type=text] {
-                background-color: $border-color;
-                border: none;
-                font-weight: bold;
-                text-align: left;
-                color: black;
-            }
-    
-    }
-
 }
 
-.header__logo_ohmyfood {
-    margin-bottom: 1em;
+.header-nav {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(rgb(146, 145, 145), rgb(228, 227, 227), rgb(228, 227, 227), rgb(228, 227, 227), rgb(228, 227, 227));
+    text-align: center;
+    padding-bottom: 0.5em;
+    & form {
+        padding-top: 0.5em;
+    }
+        & input[type=text] {
+            border: none;
+            background-color: rgb(228, 227, 227);
+            font-weight: bold;
+            color: black;
+        }
+        & i {
+            font-size: 1em;
+            padding-left: 5em;
+        }
 }
 
 .button {
     @include button;
+    margin-bottom: 2em;
+    & p {
+    text-align: center;
+    margin: 1em 0 1.2em 0;
+    }
 }
 
 main {
-    margin: 1.5em;
+    margin: 0;
 }
 
 .regles {
@@ -105,16 +86,56 @@ main {
 
 }
 
+// restaurants
 
 .restaurants {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $border-color;
+
+    &-list {
+        @include vignettes;
+        &__details {
+            @include details;
+            & h3 {
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+            & p {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+    }
     &-list img {
         object-fit: cover;
-        max-width: 340px;
         width: 100%;
-        height: 180px;
         border-radius: 18px 18px 0 0;
     }
     & h2 {
         @include titres;
+        padding-top: 1em;
+    }
+
+}
+
+.footer {
+    @include footer;
+    & img {
+        size: 0.5em;
+        width: 35%;
+        padding-bottom: 1em;
+    }
+    & a {
+        color: white;
+        padding-top: 0.3em;
+        & i {
+            padding-right: 0.8em;
+
+        }
     }
 }
+
+// @media (min-width: 667px)

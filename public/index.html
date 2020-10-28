@@ -16,23 +16,26 @@
 
 	<header class="header">
 
-		<div class="header header__logo_ohmyfood">
+		<div class="header header__logo">
 			<img src="images/logo/ohmyfood@2x.svg" alt="ohmyfood">
 		</div>
 
-		<div class="header-nav">
-			<form class="header-nav__form" method="post" action="traitement.php">
-			<label><i class="fas fa-map-marker-alt"></i></label>
+		<div class="header header-nav">
+			<form method="post" action="traitement.php">
+			<i class="fas fa-map-marker-alt"></i>
 			<input type="text" name="localite" id="localite" placeholder="Paris Belleville">
 			</form>
-
-			<div>
-				<h1>Réservez le menu qui vous convient</h1>
-				<p>Découvrez ces restaurants d'exception, sélectionnés par nos soins</p>
-			</div>
-
-			<div class="button">Explorez nos restaurants</div>
 		</div>
+
+		<div class="header header-choice">
+			<h1>Réservez le menu qui vous convient</h1>
+			<p>Découvrez ces restaurants d'exception, sélectionnés par nos soins</p>
+
+			<div class="button">
+				<p>Explorez nos restaurants</p>
+			</div>
+		</div>
+
 
 	</header>
 
@@ -51,48 +54,44 @@
 			<article class="restaurants restaurants-list">
 				<a href="la_palette_du_goût.html">
 					<figure>
-						<img src="images/restaurants/la-palette-du-gout.jpg" alt="Restaurant La palette du goût">
+						<img src="images/restaurants/petite-la-palette-du-gout.jpg" alt="Restaurant La palette du goût">
 					</figure>
-					<div>
+					<div class="restaurants-list__details">
 						<h3>La palette du goût</h3>
-						<p>Menilmontant</p>
-						<p><i class="far fa-heart"></i></p>
+						<p>Menilmontant<span><i class="far fa-heart"></i></span></p>
 					</div>
 				</a>
 			</article>
 			<article class="restaurants restaurants-list">
 				<a href="la_note_enchantee.html">
 					<figure>
-						<img src="images/restaurants/la-note-enchantee.jpg" alt="Restaurant La note enchantée">
+						<img src="images/restaurants/petite-la-note-enchantee.jpg" alt="Restaurant La note enchantée">
 					</figure>
-					<div>
+					<div class="restaurants-list__details">
 						<h3>La note enchantée</h3>
-						<p>Charonne</p>
-						<p><i class="fas fa-heart"></i></p>
+						<p>Charonne<span><i class="fas fa-heart"></i></span></p>
 					</div>
 				</a>
 			</article>
 			<article class="restaurants restaurants-list">
 				<a href="a_la_francaise.html">
 					<figure>
-						<img src="images/restaurants/a-la-francaise.jpg" alt="Restaurant À la française">
+						<img src="images/restaurants/petite-a-la-francaise.jpg" alt="Restaurant À la française">
 					</figure>
-					<div>
+					<div class="restaurants-list__details">
 						<h3>À la française</h3>
-						<p>Cité Rouge</p>
-						<p><i class="far fa-heart"></i></p>
+						<p>Cité Rouge<span><i class="far fa-heart"></i></span></p>
 					</div>
 				</a>
 			</article>
 			<article class="restaurants restaurants-list">
 				<a href="le_delice_des_sens.html">
 					<figure>
-						<img src="images/restaurants/le-delice-des-sens.jpg" alt="Restaurant Le délice des sens">
+						<img src="images/restaurants/petite-le-delice-des-sens.jpg" alt="Restaurant Le délice des sens">
 					</figure>
-					<div>
+					<div class="restaurants-list__details">
 						<h3>Le délice des sens</h3>
-						<p>Folie-Méricourt</p>
-						<p><i class="far fa-heart"></i></p>
+						<p>Folie-Méricourt<span><i class="far fa-heart"></i></span></p>
 					</div>
 				</a>
 			</article>
@@ -100,7 +99,7 @@
 	</main>
 
 	<footer class="footer">
-		<img src="images/logo/ohmyfood@2x.svg" alt="Ohmyfood">
+		<img src="images/logo/ohmyfood@white.svg" alt="Ohmyfood">
 		<a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a>
 		<a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaires</a>
 		<a href="#">Mentions légales</a>
