@@ -80,8 +80,20 @@ main {
     & h2 {
         @include titres;
     }
+    & ol {
+        list-style-type: decimal;
+        text-decoration: none;
+    }
     & li {
+        font-size: 0.9em;
+        font-weight: bold;
         @include border-radius;
+        margin: 1em 2em 2em 0.5em;
+        padding: 1em;
+        & i {
+            padding-right: 1em;
+            color: rgb(146, 145, 145);
+        }
     }
 
 }
@@ -94,47 +106,65 @@ main {
     justify-content: center;
     background-color: $border-color;
 
-    &-list {
-        @include vignettes;
-        &__details {
-            @include details;
-            & h3 {
-                font-size: 1.2em;
-                font-weight: bold;
-            }
-            & p {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-            }
-        }
-    }
-    &-list img {
-        object-fit: cover;
-        width: 100%;
-        border-radius: 18px 18px 0 0;
-    }
     & h2 {
         @include titres;
         padding-top: 1em;
     }
 
+    &-list {
+        @include vignettes;
+        &__details {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            @include details;
+            & h3 {
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+            & a:hover {
+                text-decoration: none;
+            }
+
+        }
+        & figure {
+            margin-bottom: 0.8em;
+        }
+        & img {
+            object-fit: cover;
+            width: 100%;
+            border-radius: 18px 18px 0 0;
+        }
+    
+    }
 }
+
+.heart {
+    font-size: 1.5em;   
+    text-align: right;
+    color: black;
+    position: relative;
+}
+
+
 
 .footer {
     @include footer;
+
     & img {
-        size: 0.5em;
         width: 35%;
-        padding-bottom: 1em;
+        padding-bottom: 1.2em;
     }
     & a {
         color: white;
         padding-top: 0.3em;
         & i {
             padding-right: 0.8em;
-
         }
+    }
+    & .fa-hands-helping {
+        font-size: 0.8em;
     }
 }
 

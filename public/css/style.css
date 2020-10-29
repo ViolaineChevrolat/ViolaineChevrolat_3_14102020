@@ -82,9 +82,22 @@ main {
   font-family: roboto, calibri, sans-serif;
   margin: 1em;
 }
+.regles ol {
+  list-style-type: decimal;
+  text-decoration: none;
+}
 .regles li {
+  font-size: 0.9em;
+  font-weight: bold;
   border: 1px solid #f5f4f4;
-  border-radius: 4px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 8px 2px #e2e0e0;
+  margin: 1em 2em 2em 0.5em;
+  padding: 1em;
+}
+.regles li i {
+  padding-right: 1em;
+  color: #929191;
 }
 
 .restaurants {
@@ -92,6 +105,13 @@ main {
   flex-direction: column;
   justify-content: center;
   background-color: #f5f4f4;
+}
+.restaurants h2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: roboto, calibri, sans-serif;
+  margin: 1em;
+  padding-top: 1em;
 }
 .restaurants-list {
   justify-content: center;
@@ -102,44 +122,48 @@ main {
   height: auto;
 }
 .restaurants-list__details {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   color: black;
-  margin: 0 1em;
+  margin: 0 1em 0.5em 1em;
   line-height: 0.5em;
 }
 .restaurants-list__details h3 {
   font-size: 1.2em;
   font-weight: bold;
 }
-.restaurants-list__details p {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.restaurants-list__details a:hover {
+  text-decoration: none;
+}
+.restaurants-list figure {
+  margin-bottom: 0.8em;
 }
 .restaurants-list img {
   object-fit: cover;
   width: 100%;
   border-radius: 18px 18px 0 0;
 }
-.restaurants h2 {
-  font-size: 1.3rem;
-  font-weight: bold;
-  font-family: roboto, calibri, sans-serif;
-  margin: 1em;
-  padding-top: 1em;
+
+.heart {
+  font-size: 1.5em;
+  text-align: right;
+  color: black;
+  position: relative;
 }
 
 .footer {
   display: flex;
   flex-direction: column;
-  padding: 1em;
-  background-color: #4d4b4b;
+  padding: 2em 1em 2em 1.5em;
+  background-color: #3a3939;
   text-decoration: none;
   color: white;
 }
 .footer img {
-  size: 0.5em;
   width: 35%;
-  padding-bottom: 1em;
+  padding-bottom: 1.2em;
 }
 .footer a {
   color: white;
@@ -147,6 +171,9 @@ main {
 }
 .footer a i {
   padding-right: 0.8em;
+}
+.footer .fa-hands-helping {
+  font-size: 0.8em;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -14,7 +14,8 @@
 
 @mixin border-radius ($color: $border-color) {
     border: 1px solid $color;
-    border-radius: 4px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 8px 2px rgb(226, 224, 224);
 }
 
 @mixin button ($color: $color-secondaire) {
@@ -39,15 +40,15 @@
 
 @mixin details {
     color: black;
-    margin: 0 1em;
+    margin: 0 1em 0.5em 1em;
     line-height: 0.5em;
 }
 
 @mixin footer {
     display: flex;
     flex-direction: column;
-    padding: 1em;
-    background-color: rgb(77, 75, 75);
+    padding: 2em 1em 2em 1.5em;
+    background-color: rgb(58, 57, 57);
     text-decoration: none;
     color: white;
 }
