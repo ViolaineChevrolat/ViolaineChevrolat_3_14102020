@@ -15,7 +15,7 @@
 @mixin border-radius ($color: $border-color) {
     border: 1px solid $color;
     border-radius: 20px;
-    box-shadow: 2px 2px 8px 2px rgb(226, 224, 224);
+    box-shadow: 2px 2px 8px 2px rgb(177, 175, 175);
 }
 
 @mixin button ($color: $color-secondaire) {
@@ -25,14 +25,16 @@
     color: white;
     font-weight: 600;
     box-shadow: 2px 4px 4px rgb(177, 176, 176);
-    padding: 0;
+    padding: 0.1em 0;
     margin: 0 3rem;
+    margin-bottom: 2em;
 }
 
 @mixin vignettes {
     justify-content: center;
     border: 0 white solid;
     border-radius: 20px;
+    box-shadow: 2px 2px 8px 2px rgb(177, 175, 175);
     background-color: white;
     margin: 1em;
     height: auto;
@@ -51,4 +53,37 @@
     background-color: rgb(58, 57, 57);
     text-decoration: none;
     color: white;
+}
+
+@mixin menu {
+    display: flex;
+    flex-direction: column;
+    bottom: 5em;
+    margin: 0;
+    padding-top: 1em;
+    border: 1px solid $border-color;
+    border-radius: 30px 30px 0 0;
+    background-color: $border-color;
+
+}
+
+@mixin resto-titre {
+    font-family: Shrikhand;
+    font-size: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: black;
+    margin: 1em 1em 0.5em 1em;
+}
+
+@mixin menu-plats {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 2px 2px 8px 2px rgb(177, 175, 175);
+    margin: 1em 0 0 0;
+    padding: 0.8em 0.8em 0 0.8em;
 }

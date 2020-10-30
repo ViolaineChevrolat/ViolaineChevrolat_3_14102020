@@ -1,0 +1,50 @@
+// fiches restaurants
+
+.header-restaurant {
+    position: relative;
+        & img {
+        width: 100%;
+        position: relative;
+    }
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    /*bottom: 20em;*/
+    position: relative;
+    @include menu;
+    & h3 {
+        font-size: 1.2em;
+    }
+}
+
+.trait {
+    border: 1px $color-tertiaire solid;
+    width: 3.5em;
+}
+
+.menu-title {
+    @include resto-titre;
+    & i {
+        font-size: 1.5em;
+        margin-right: 0.3em;
+    }
+}
+
+.menu_soustitle {
+    margin: 1em;
+}
+
+.menu-plats {
+    @include menu-plats;
+    & h4 {
+        font-weight: bold;
+        font-size: 1.3em;
+    }
+    & div {
+        display: flex;
+        flex-direction: row;
+    }
+
+}

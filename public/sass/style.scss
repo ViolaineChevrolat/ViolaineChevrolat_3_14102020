@@ -1,7 +1,9 @@
 
-@import "./libs/_variables";
+@import "./libs/_variables.scss";
 
 @import "./libs/mixins.scss";
+
+
 
 body {
     font-family: roboto, calibri, sans-serif;
@@ -16,10 +18,12 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 1em;
-    & __logo {
-        margin-bottom: 1em;
-        }
+    &__logo {
+        margin: 0.8em;
+        display: flex;
+        justify-content: center;
     }
+}
 
 
 .header-choice {
@@ -63,7 +67,6 @@ body {
 
 .button {
     @include button;
-    margin-bottom: 2em;
     & p {
     text-align: center;
     margin: 1em 0 1.2em 0;
@@ -89,7 +92,8 @@ main {
         font-weight: bold;
         @include border-radius;
         margin: 1em 2em 2em 0.5em;
-        padding: 1em;
+        padding: 1.2em 1em 1.5em 1em;
+        background-color: $border-color;
         & i {
             padding-right: 1em;
             color: rgb(146, 145, 145);
@@ -105,7 +109,6 @@ main {
     flex-direction: column;
     justify-content: center;
     background-color: $border-color;
-
     & h2 {
         @include titres;
         padding-top: 1em;
@@ -113,6 +116,7 @@ main {
 
     &-list {
         @include vignettes;
+        position: relative;
         &__details {
             display: flex;
             flex-direction: row;
@@ -140,18 +144,48 @@ main {
     }
 }
 
+.restaurants {
+    padding-bottom: 2.5em;
+}
+
+.restaurants-list__new1 {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    background: $color-tertiaire;
+    border: 1px solid $color-tertiaire;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    color: #28967c;
+}
+
+.restaurants-list__new2 {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    background: $color-tertiaire;
+    border: 1px solid $color-tertiaire;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    color: #28967c;
+}
+
 .heart {
     font-size: 1.5em;   
     text-align: right;
     color: black;
     position: relative;
+    top: 0.3em;
 }
 
 
 
 .footer {
     @include footer;
-
     & img {
         width: 35%;
         padding-bottom: 1.2em;
@@ -167,5 +201,69 @@ main {
         font-size: 0.8em;
     }
 }
+
+
+// fiches restaurants
+
+.header-restaurant {
+    position: relative;
+        & img {
+        width: 100%;
+        position: relative;
+    }
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    @include menu;
+    & h3 {
+        font-size: 1.2em;
+    }
+}
+
+.trait {
+    border: 1px $color-tertiaire solid;
+    width: 3.5em;
+}
+
+.menu-title {
+    @include resto-titre;
+    & i {
+        font-size: 1.5em;
+        margin-right: 0.3em;
+    }
+}
+
+.menu_soustitle {
+    margin: 1em;
+}
+
+.menu-plats {
+    @include menu-plats;
+    & h4 {
+        font-weight: bold;
+        font-size: 1.3em;
+        margin-bottom: 0;
+    }
+}
+
+.menu-plats__details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/*& i {
+    position: relative;
+    margin-left: 1em;
+    color: black;
+    bottom: 1.8em;
+}*/
+
+
+
+
 
 // @media (min-width: 667px)
