@@ -70,9 +70,10 @@ body {
 .button {
     @include button;
     & p {
-    text-align: center;
-    margin: 1em 0 1.2em 0;
-    }
+        width: 226px;
+        text-align: center;
+        margin: 1em 0 1.2em 0;
+     }
 }
 
 main {
@@ -82,17 +83,19 @@ main {
 .regles {
     display: flex;
     flex-direction: column;
-    max-width: 380px;
-    width: 100%;
+    justify-content: center;
+    /*max-width: 380px;
+    width: 100%;*/
     margin-top: 1em;
     & h2 {
         @include titres;
     }
     & ol {
-        list-style-type: decimal;
+
         text-decoration: none;
     }
     & li {
+        justify-content: center;
         font-size: 0.9em;
         font-weight: bold;
         @include border-radius;
@@ -270,7 +273,7 @@ main {
 
 
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 568px) {
 
     .regles {
         max-width: 100%;
@@ -290,24 +293,22 @@ main {
 
     }
 
-    /*.restaurants {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }*/
+
+}
+
+@media screen and (min-width: 767px) {
+
 
     .restos {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        marg
         & .restaurants-list {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            max-width: 370px;
-            width: 100%;
-            /*margin: 2em;*/
+            max-width: 350px;
         }
     }
 
@@ -316,6 +317,13 @@ main {
         flex-wrap: wrap;
         justify-content: center;
 
+    }
+
+    .menu_menus {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
 
