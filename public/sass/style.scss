@@ -3,6 +3,8 @@
 
 @import "./libs/mixins.scss";
 
+@import "./libs/responsive.scss";
+
 
 
 body {
@@ -80,6 +82,9 @@ main {
 .regles {
     display: flex;
     flex-direction: column;
+    max-width: 380px;
+    width: 100%;
+    margin-top: 1em;
     & h2 {
         @include titres;
     }
@@ -187,13 +192,19 @@ main {
 .footer {
     @include footer;
     & img {
-        width: 35%;
+        width: 100px;
         padding-bottom: 1.2em;
     }
-    & a {
-        color: white;
+    & .footer-a {
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
         padding-top: 0.3em;
+        & a {
+            color: white;
+        }
         & i {
+            flex-direction: wrap;
             padding-right: 0.8em;
         }
     }
@@ -217,7 +228,9 @@ main {
     display: flex;
     flex-direction: column;
     position: relative;
+    height: 100%;
     @include menu;
+    padding-bottom: 1em;
     & h3 {
         font-size: 1.2em;
     }
@@ -237,7 +250,7 @@ main {
 }
 
 .menu_soustitle {
-    margin: 1em;
+    margin: 1em 1em 2em 1em;
 }
 
 .menu-plats {
@@ -255,15 +268,59 @@ main {
     justify-content: space-between;
 }
 
-/*& i {
-    position: relative;
-    margin-left: 1em;
-    color: black;
-    bottom: 1.8em;
-}*/
+
+
+@media screen and (min-width: 767px) {
+
+    .regles {
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & ol {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            & li {
+                align-items: center;
+                justify-content: space-around;
+            }
+        }
+
+    }
+
+    /*.restaurants {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }*/
+
+    .restos {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        marg
+        & .restaurants-list {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            max-width: 370px;
+            width: 100%;
+            /*margin: 2em;*/
+        }
+    }
+
+    .footer-a a {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
+
+}
 
 
 
 
-
-// @media (min-width: 667px)

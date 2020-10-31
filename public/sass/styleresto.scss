@@ -11,7 +11,6 @@
 .menu {
     display: flex;
     flex-direction: column;
-    /*bottom: 20em;*/
     position: relative;
     @include menu;
     & h3 {
@@ -41,10 +40,12 @@
     & h4 {
         font-weight: bold;
         font-size: 1.3em;
+        margin-bottom: 0;
     }
-    & div {
-        display: flex;
-        flex-direction: row;
-    }
+}
 
+.menu-plats__details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }

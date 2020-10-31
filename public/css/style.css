@@ -1,3 +1,8 @@
+@media screen and (min-width: 767px) {
+  .regles {
+    flex-direction: row;
+  }
+}
 body {
   font-family: roboto, calibri, sans-serif;
   box-sizing: border-box;
@@ -62,8 +67,7 @@ body {
   font-weight: 600;
   box-shadow: 2px 4px 4px #b1b0b0;
   padding: 0.1em 0;
-  margin: 0 3rem;
-  margin-bottom: 2em;
+  margin: 2em 3em 4em 3em;
 }
 .button p {
   text-align: center;
@@ -77,12 +81,15 @@ main {
 .regles {
   display: flex;
   flex-direction: column;
+  max-width: 380px;
+  width: 100%;
+  margin-top: 1em;
 }
 .regles h2 {
   font-size: 1.3rem;
   font-weight: bold;
   font-family: roboto, calibri, sans-serif;
-  margin: 1em;
+  margin: 1em 1em 0.5em 1em;
 }
 .regles ol {
   list-style-type: decimal;
@@ -113,7 +120,7 @@ main {
   font-size: 1.3rem;
   font-weight: bold;
   font-family: roboto, calibri, sans-serif;
-  margin: 1em;
+  margin: 1em 1em 0.5em 1em;
   padding-top: 1em;
 }
 .restaurants-list {
@@ -194,18 +201,22 @@ main {
   flex-direction: column;
   padding: 2em 1em 2em 1.5em;
   background-color: #3a3939;
-  text-decoration: none;
-  color: white;
 }
 .footer img {
-  width: 35%;
+  width: 100px;
   padding-bottom: 1.2em;
 }
-.footer a {
-  color: white;
+.footer .footer-a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
   padding-top: 0.3em;
 }
-.footer a i {
+.footer .footer-a a {
+  color: white;
+}
+.footer .footer-a i {
+  flex-direction: wrap;
   padding-right: 0.8em;
 }
 .footer .fa-hands-helping {
@@ -224,14 +235,16 @@ main {
   display: flex;
   flex-direction: column;
   position: relative;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  bottom: 5em;
+  bottom: 3em;
   margin: 0;
   padding-top: 1em;
   border: 1px solid #f5f4f4;
   border-radius: 30px 30px 0 0;
   background-color: #f5f4f4;
+  padding-bottom: 1em;
 }
 .menu h3 {
   font-size: 1.2em;
@@ -257,7 +270,7 @@ main {
 }
 
 .menu_soustitle {
-  margin: 1em;
+  margin: 1em 1em 2em 1em;
 }
 
 .menu-plats {
@@ -282,11 +295,48 @@ main {
   justify-content: space-between;
 }
 
-/*& i {
-    position: relative;
-    margin-left: 1em;
-    color: black;
-    bottom: 1.8em;
-}*/
+@media screen and (min-width: 767px) {
+  .regles {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .regles ol {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .regles ol li {
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  /*.restaurants {
+      flex-direction: row;
+      flex-wrap: wrap;
+  }*/
+  .restos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  marg .restos .restaurants-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 370px;
+    width: 100%;
+    /*margin: 2em;*/
+  }
+
+  .footer-a a {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

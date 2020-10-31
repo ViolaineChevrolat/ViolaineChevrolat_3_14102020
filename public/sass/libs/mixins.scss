@@ -9,7 +9,7 @@
     font-size: 1.3rem;
     font-weight: bold;
     font-family: roboto, calibri, sans-serif;
-    margin: 1em;
+    margin: 1em 1em 0.5em 1em;
 }
 
 @mixin border-radius ($color: $border-color) {
@@ -26,8 +26,7 @@
     font-weight: 600;
     box-shadow: 2px 4px 4px rgb(177, 176, 176);
     padding: 0.1em 0;
-    margin: 0 3rem;
-    margin-bottom: 2em;
+    margin: 2em 3em 4em 3em;
 }
 
 @mixin vignettes {
@@ -51,14 +50,12 @@
     flex-direction: column;
     padding: 2em 1em 2em 1.5em;
     background-color: rgb(58, 57, 57);
-    text-decoration: none;
-    color: white;
 }
 
 @mixin menu {
     display: flex;
     flex-direction: column;
-    bottom: 5em;
+    bottom: 3em;
     margin: 0;
     padding-top: 1em;
     border: 1px solid $border-color;
