@@ -86,8 +86,6 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /*max-width: 380px;
-  width: 100%;*/
   margin-top: 1em;
 }
 .regles h2 {
@@ -108,7 +106,9 @@ main {
   box-shadow: 2px 2px 8px 2px #b1afaf;
   margin: 1em 2em 2em 0.5em;
   padding: 1.2em 1em 1.5em 1em;
-  background-color: #f5f4f4;
+}
+.regles li:hover {
+  background-color: #fd99e1a9;
 }
 .regles li i {
   padding-right: 1em;
@@ -138,6 +138,9 @@ main {
   height: auto;
   position: relative;
 }
+.restaurants-list a:hover {
+  text-decoration: none;
+}
 .restaurants-list__details {
   display: flex;
   flex-direction: row;
@@ -151,15 +154,13 @@ main {
   font-size: 1.2em;
   font-weight: bold;
 }
-.restaurants-list__details a:hover {
-  text-decoration: none;
-}
 .restaurants-list figure {
   margin-bottom: 0.8em;
 }
 .restaurants-list img {
   object-fit: cover;
   width: 100%;
+  height: auto;
   border-radius: 18px 18px 0 0;
 }
 
@@ -203,29 +204,33 @@ main {
 
 .footer {
   display: flex;
-  flex-direction: column;
+  /*flex-direction: column;*/
   padding: 2em 1em 2em 1.5em;
   background-color: #3a3939;
+  flex-direction: column;
 }
 .footer img {
   width: 100px;
   padding-bottom: 1.2em;
 }
-.footer .footer-a {
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-  padding-top: 0.3em;
-}
-.footer .footer-a a {
-  color: white;
-}
-.footer .footer-a i {
+.footer i {
   flex-direction: wrap;
   padding-right: 0.8em;
 }
 .footer .fa-hands-helping {
   font-size: 0.8em;
+}
+
+.footer-a {
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.3em;
+}
+.footer-a a {
+  color: white;
+}
+.footer-a a:hover {
+  text-decoration: none;
 }
 
 .header-restaurant {
@@ -302,9 +307,7 @@ main {
 
 @media screen and (min-width: 568px) {
   .regles {
-    max-width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
   }
   .regles ol {
@@ -312,18 +315,22 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    width: 100%;
   }
   .regles ol li {
     align-items: center;
-    justify-content: space-around;
   }
 }
 @media screen and (min-width: 767px) {
+  .restaurants h2 {
+    text-align: center;
+  }
+
   .restos {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   .restos .restaurants-list {
     display: flex;
@@ -332,10 +339,21 @@ main {
     max-width: 350px;
   }
 
-  .footer-a a {
+  .footer {
+    flex-direction: column;
+  }
+  .footer-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-a {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   .menu_menus {

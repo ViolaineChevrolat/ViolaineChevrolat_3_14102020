@@ -84,14 +84,11 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /*max-width: 380px;
-    width: 100%;*/
     margin-top: 1em;
     & h2 {
         @include titres;
     }
     & ol {
-
         text-decoration: none;
     }
     & li {
@@ -101,7 +98,9 @@ main {
         @include border-radius;
         margin: 1em 2em 2em 0.5em;
         padding: 1.2em 1em 1.5em 1em;
-        background-color: $border-color;
+        &:hover {
+            background-color: #fd99e1a9;
+            }
         & i {
             padding-right: 1em;
             color: rgb(146, 145, 145);
@@ -125,6 +124,9 @@ main {
     &-list {
         @include vignettes;
         position: relative;
+        & a:hover {
+            text-decoration: none;
+        }
         &__details {
             display: flex;
             flex-direction: row;
@@ -135,9 +137,6 @@ main {
                 font-size: 1.2em;
                 font-weight: bold;
             }
-            & a:hover {
-                text-decoration: none;
-            }
 
         }
         & figure {
@@ -146,6 +145,7 @@ main {
         & img {
             object-fit: cover;
             width: 100%;
+            height: auto;
             border-radius: 18px 18px 0 0;
         }
     
@@ -194,25 +194,29 @@ main {
 
 .footer {
     @include footer;
+    flex-direction: column;
     & img {
         width: 100px;
         padding-bottom: 1.2em;
     }
-    & .footer-a {
-        display: flex;
-        flex-direction: column;
-        text-decoration: none;
-        padding-top: 0.3em;
-        & a {
-            color: white;
-        }
         & i {
             flex-direction: wrap;
             padding-right: 0.8em;
         }
-    }
     & .fa-hands-helping {
         font-size: 0.8em;
+    }
+}
+
+.footer-a {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.3em;
+    & a {
+        color: white;
+        &:hover {
+            text-decoration: none;
+        }
     }
 }
 
@@ -276,18 +280,16 @@ main {
 @media screen and (min-width: 568px) {
 
     .regles {
-        max-width: 100%;
         display: flex;
-        justify-content: center;
         align-items: center;
         & ol {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-around;
+            width: 100%;
             & li {
                 align-items: center;
-                justify-content: space-around;
             }
         }
 
@@ -299,11 +301,15 @@ main {
 @media screen and (min-width: 767px) {
 
 
+    .restaurants h2 {
+        text-align: center;
+    }
+
     .restos {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
         & .restaurants-list {
             display: flex;
             flex-direction: row;
@@ -312,11 +318,21 @@ main {
         }
     }
 
-    .footer-a a {
+    .footer {
+        flex-direction: column;
+        &-logo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .footer-a {
+        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
-
+        justify-content: space-between;
     }
 
     .menu_menus {
