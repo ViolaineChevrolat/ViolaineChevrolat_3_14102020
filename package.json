@@ -1,0 +1,19 @@
+{
+  "name": "violainechevrolat_3_14102020",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/style.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViolaineChevrolat/ViolaineChevrolat_3_14102020..git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ViolaineChevrolat/ViolaineChevrolat_3_14102020./issues"
+  },
+  "homepage": "https://github.com/ViolaineChevrolat/ViolaineChevrolat_3_14102020.#readme"
+}
